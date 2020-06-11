@@ -90,5 +90,3 @@ file.getFilesAndFoldersNames = function(){
   return generateNamesForFiles;
 
 }
-
-console.log(file.getFilesAndFoldersNames());
