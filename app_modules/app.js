@@ -1,5 +1,9 @@
 var express = require("express");
-var routes = require("./routes/create")
+var createRoutes = require("./routes/create");
+var confirmRoutes = require("./routes/confirm");
+var handler = require("./handler");
+
+
 
 var exp = express();
 var port = 1996;
@@ -15,7 +19,10 @@ app.applicationMiddleware = function(){
   // serving static file from public dir
   appMidware.renderStatic = function(){
     exp.use(express.static('public'));
-    exp.use('/create',routes)
+    exp.use(express.urlencoded({ extended: true }));
+    exp.use(express.json());
+    exp.use('/create',createRoutes);
+    exp.use('/confirm',confirmRoutes);
   }
 
   // serving html files from template dir
@@ -33,7 +40,41 @@ app.applicationMiddleware = function(){
 app.applicationRoutes = function(){
 
   exp.get('/',function(req,res){
-    res.render('login', { title : "Social App"} );
+    res.render('index', { title : "Remainder"} );
+  });
+
+  exp.get('/datas',function(req,res){
+    res.send(handler.getDataLists());
+  });
+
+  exp.get('/delete',function(req,res){
+    var delData = handler.getRequestFileData(req.query.post);
+    res.render("edit",{ 
+      title : "Remainder-Delete", 
+      fileContent : delData , 
+      fileReqDel : req.query.post, 
+      fileReqUp : false 
+    });
+  });
+
+  exp.get('/update',function(req,res){
+    var upData = handler.getRequestFileData(req.query.post);
+    res.render("edit",{
+      title : "Remainder-Update", 
+      fileContent : upData , 
+      fileReqDel : false, 
+      fileReqUp : req.query.post 
+    });
+  });
+
+  exp.get('/view',function(req,res){
+    var viewData = handler.getRequestFileData(req.query.post);
+    res.render("edit",{ 
+      title : "Remainder-View",
+      fileContent : viewData ,
+      fileReqDel : false,
+      fileReqUp : false
+    });
   });
 
 }

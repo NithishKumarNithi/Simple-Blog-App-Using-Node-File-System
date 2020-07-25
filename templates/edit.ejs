@@ -1,0 +1,43 @@
+<%- include('edit_header'); %>
+
+
+<div class="rm-inp-container">
+  <div class="rm-inp-container-inn">
+    <% if(fileContent){ %>
+    <div class="rm-form-fields">
+      <div class="input-group mb-4 mt-4">
+        <input type="text" class="form-control rm-form-title rm-inp-form-fields"  value="<%- fileContent.title %> " placeholder="Title" aria-label="Title" aria-describedby="basic-addon1" id="rm-form-title" disabled>
+        <div class="mt-2 mx-1 rm-error rm-hide" id="rm-error-title"></div>
+      </div>
+
+      <div class="input-group mb-4 mt-4">
+        <input type="text" class="form-control rm-form-calender rm-inp-form-fields" value="<%- fileContent.date %>" placeholder="Date" aria-label="Date" aria-describedby="basic-addon1" data-toggle="datepicker" id="rm-form-calender" disabled>   
+        <div class="mt-2 mx-1 rm-error rm-hide" id="rm-error-calender"></div>   
+      </div>
+
+      <div class="input-group mb-4 mt-4">
+        <textarea class="form-control rm-form-textarea rm-inp-form-fields" aria-label="textarea" rows="10" placeholder="Write Something" id="rm-form-textarea" disabled><%= fileContent.description  %></textarea>
+        <div class="mt-2 mx-1 rm-error rm-hide" id="rm-error-textarea"></div>
+      </div>
+
+      <div class="mb-4 mt-4 rm-form-button-wrap-container">
+        <a class="btn rm-form-home-btn my-2 my-sm-0 " href="/" id="rm-form-home-btn">Go Home</a>
+        <% if(fileReqDel) { %>
+          <button  data-filename="<%- fileReqDel %>" class="btn rm-form-confrim-btn my-2 my-sm-0 "  id="rm-form-confrim-btn">Confrim</button>
+        <% } %>
+        <% if(fileReqUp) { %>
+          <button  data-filename="<%- fileReqUp %>" class="btn rm-form-update-btn my-2 my-sm-0 "  id="rm-form-update-btn">Update</button>
+        <% } %>
+      </div>
+      
+  </div>
+  <% } else { %>
+    <div> File Doesn't Exist </div>
+  <% } %>
+  </div>
+</div>
+
+
+<%- include('footer'); %>
+
+

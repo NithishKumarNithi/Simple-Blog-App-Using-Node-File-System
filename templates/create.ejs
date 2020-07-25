@@ -1,6 +1,32 @@
-<%- include('header'); %>
+<%- include('edit_header'); %>
 
-  <h1 class="head-one"> Create </h1>
+<div class="rm-inp-container">
+  <div class="rm-inp-container-inn">
 
+    <div class="rm-form-fields">
+      <div class="input-group mb-4 mt-4">
+        <input type="text" class="form-control rm-form-title rm-inp-form-fields" placeholder="Title" aria-label="Title" aria-describedby="basic-addon1" id="rm-form-title">
+        <div class="mt-2 mx-1 rm-error rm-hide" id="rm-error-title"></div>
+      </div>
+
+      <div class="input-group mb-4 mt-4">
+        <input type="text" class="form-control rm-form-calender rm-inp-form-fields" placeholder="Date" aria-label="Date" aria-describedby="basic-addon1" data-toggle="datepicker" id="rm-form-calender">  
+        <div class="mt-2 mx-1 rm-error rm-hide" id="rm-error-calender"></div>   
+      </div>
+
+      <div class="input-group mb-4 mt-4">
+        <textarea class="form-control rm-form-textarea rm-inp-form-fields" aria-label="textarea" rows="10" placeholder="Write Something" id="rm-form-textarea"></textarea>
+        <div class="mt-2 mx-1 rm-error rm-hide" id="rm-error-textarea"></div>
+      </div>
+
+      <div class="mb-4 mt-4 rm-form-button-wrap-container">
+        <a class="btn rm-form-home-btn my-2 my-sm-0 " href="/" id="rm-form-home-btn">Go Home</a>
+        <button class="btn rm-form-submit-btn my-2 my-sm-0 " type="submit" id="rm-form-submit-btn">Submit</button>
+      </div>
+      
+  </div>
+
+  </div>
+</div>
 
 <%- include('footer'); %>

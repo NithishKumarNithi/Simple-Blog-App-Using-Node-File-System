@@ -6,10 +6,26 @@
   <% if(title){ %>
       <title> <%= title %> </title>
   <% }else { %>
-      <title>Social Appd</title>
+      <title>Remainder</title>
   <% } %>
   <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../plugins/dist/datepicker.css">
+  <link rel="stylesheet" href="../fonts/font-icons/css/all.css">
+  <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
+
+  <!-- header -->
+  <nav class="navbar navbar-expand-lg rm-nav-bg p-3">
+    <div class="rm-header-container container">
+      <a href="/" class="navbar-brand rm-brand">Remainder</a>
+      <!-- 
+      <div class="collapse navbar-collapse rm-search-form">
+        <div class="form-inline ml-auto my-lg-0 ">
+          <input class="form-control mr-sm-2 rm-form-control" type="search" placeholder="Search By Date" aria-label="Search By Date" data-toggle="datepicker">
+          <button class="btn rm-btn my-2 my-sm-0" type="submit">Search</button>
+        </div>
+      </div>
+      -->
+    </div>
+  </nav>

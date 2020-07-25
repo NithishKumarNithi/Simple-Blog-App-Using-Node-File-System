@@ -24,6 +24,7 @@
 
 *{
   box-sizing: border-box;
+  font-family: Montserrat-Medium,sans-serif;
 }
 
 body{
@@ -31,8 +32,262 @@ body{
   padding: 0;
 }
 
-.head-one{
-  font-family: Montserrat-Medium,sans-serif;
-  font-size: 28px;
-  color: green;
+.rm-nav-bg{
+  background: #ff8e86;
+  color: #fff;
+}
+
+.rm-btn{
+  background: #fff;
+  border-color: #ff8e86;
+  color: #ff8e86;
+  font-size: 14px;
+  padding: 8px 40px;
+  border-radius: 50px;
+  outline: none;
+}
+
+.rm-btn:focus{
+  outline: none;
+  box-shadow: 0 0 0 0 transparent;
+}
+
+.rm-btn:hover{
+  color: #fff;
+  border-color: #fff;
+  background: #ff8e86 ;
+}
+
+.rm-brand,
+.rm-brand:hover{
+  letter-spacing: 1px;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+.rm-form-control{
+  border-radius: 50px;
+
+}
+
+.rm-inp-form-fields{
+  width: 100% !important;
+}
+
+.rm-form-control:focus,
+.rm-inp-form-fields:focus,
+.rm-form-submit-btn:focus,
+.rm-form-compose-btn:focus,
+.rm-form-home-btn:focus,
+.rm-form-confrim-btn:focus,
+.rm-form-update-btn:focus{
+  outline: none;
+  border-color: transparent;
+  box-shadow: 0 0 0 0.2rem rgb(255, 142, 134, 0.25);
+}
+
+.rm-form-control[placeholder],
+.rm-inp-form-fields[placeholder]{
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  padding: 8px 15px;
+}
+
+.rm-inp-container
+{
+  width: 100%;
+  height: 90vh;
+  min-height: 675px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.rm-user-container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.rm-userposts{
+  width: 100%;
+}
+
+.rm-userposts-wrap{
+  border: 1px solid #ff8e86;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.rm-userpost-post-content{
+  padding: 1.2rem;
+}
+
+.rm-userpost-post-content-info{
+  padding: 0.7rem;
+}
+
+.rm-userpost-content{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.rm-userpost-bottom-flex{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.rm-userpost-created-on,
+.rm-userpost-edit-icons span{
+  font-size: 12px;
+}
+
+.rm-userpost-title{
+  font-size: 1.2rem;
+  margin-bottom: 1.4rem;
+}
+
+.rm-userpost-description{
+  font-size: 0.9rem;
+  margin-bottom: 1.4rem;
+}
+
+.rm-userpost-description-in {
+  line-height: 2;
+}
+
+.rm-userpost-edit-icons span {
+  margin: 0 5px;
+  background: #fff;
+  color: #ff8e86;
+  border: 1px solid #ff8e86;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  text-align: center;
+  line-height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 0 0.2rem transparent;
+  transition: box-shadow 0.5s ease;
+}
+
+.rm-userpost-edit-icons span:hover{
+  transition: box-shadow 0.5s ease;
+  box-shadow: 0 0 0 0.2rem rgb(255, 142, 134, 0.45);
+}
+
+.rm-userpost-edit-icons-links,
+.rm-userpost-edit-icons-links:hover{
+  color: #ff8e86;;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.rm-inp-container-inn,
+.rm-user-container-inn{
+  width: 70%;
+  max-width: 625px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rm-user-container-inn-right{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.rm-form-textarea{
+  min-height: 260px;
+  max-height: 280px;
+  line-height: 1.8;
+}
+
+.rm-form-title{
+  text-transform: capitalize;
+}
+
+.rm-form-submit-btn,
+.rm-form-compose-btn,
+.rm-form-home-btn,
+.rm-form-confrim-btn,
+.rm-form-update-btn{
+  background: #ff8e86;
+  border-color: #ff8e86;
+  color: #fff !important;
+  font-size: 14px;
+  padding: 8px 40px;
+  border-radius: 50px;
+  outline: none;
+  letter-spacing: 2px;
+}
+
+.rm-form-submit-btn:hover,
+.rm-form-compose-btn:hover,
+.rm-form-home-btn:hover,
+.rm-form-confrim-btn:hover,
+.rm-form-update-btn:hover{
+  background: #fff;
+  border-color: #ff8e86;
+  color: #ff8e86 !important;
+}
+
+.rm-error{
+  font-size: 12px;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+.rm-hide{
+  display: none;
+}
+
+.rm-show{
+  display: block;
+}
+
+.rm-form-button-wrap-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* datepicker custom styles */
+
+.datepicker-top-left, .datepicker-top-right{
+  border-top-color: #ff8e86;
+}
+
+.datepicker-top-left::before, .datepicker-top-right::before {
+  border-bottom-color: #ff8e86;
+}
+
+.datepicker-panel > ul > li.picked, .datepicker-panel > ul > li.picked:hover,
+.datepicker-panel > ul > li:hover {
+  background-color: rgb(255, 142, 134);
+  color: #fff;
+}
+
+.datepicker-panel > ul > li.highlighted:hover {
+  background-color: rgb(255, 142, 134);
+}
+
+.datepicker-panel > ul > li.muted:hover{
+  color: #fff;
+}
+
+.datepicker-panel > ul[data-view="week"] > li:hover{
+  color: #ff8e86;
 }
